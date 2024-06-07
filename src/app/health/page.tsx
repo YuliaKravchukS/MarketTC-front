@@ -4,6 +4,11 @@ const getData = async () => {
   return response.json();
 };
 
+type User = {
+  id: string;
+  name: string;
+};
+
 const HealthCheckPage = async () => {
   const apiData = await getData();
   return (
@@ -11,7 +16,7 @@ const HealthCheckPage = async () => {
       <h1>Health Check</h1>
 
       <div>
-        {apiData.map((user: any) => (
+        {apiData.map((user: User) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </div>
