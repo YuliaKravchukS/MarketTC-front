@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  @apply bg-background-500 text-black-500;
+}
+
 @layer utilities {
   h1 {
     @apply text-h1;
@@ -29,5 +33,12 @@
   }
   p {
     @apply text-p;
+  }
+}
+
+@media (min-width: 376px) {
+  h6 {
+    font-size: 32px;
+    line-height: 48px;
   }
 }

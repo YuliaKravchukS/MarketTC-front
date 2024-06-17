@@ -20,7 +20,7 @@ const config: Config = {
           100: '#FDCD8D',
           500: '#FF9506',
         },
-        text: {
+        black: {
           100: '#BDC6C6',
           500: '#181C1C',
         },
@@ -39,7 +39,7 @@ const config: Config = {
       h3: ['48px', '56px'],
       h4: ['40px', '48px'],
       h5: ['32px', '40px'],
-      h6: ['24px', '32px'],
+      h6: ['24px', '36px'],
       lg: ['18px', '32px'],
       base: ['16px', '24px'],
       sm: ['14px', '24px'],
