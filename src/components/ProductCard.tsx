@@ -33,8 +33,8 @@ const ProductCard = () => {
 
       <div className="mt-3 mb-2">Product name</div>
       <div className=" flex h-[40px] justify-between items-end">
-        <div className="py-2">Price</div>
-        <div className="product-card__btn-cart p-2.5">
+        <div className="pt-2 pb-1">Price</div>
+        <div className="product-card__btn-cart p-2.5 pb-2">
           <Image src="/icons/cart.svg" width={20} height={20} alt="" />
         </div>
       </div>
