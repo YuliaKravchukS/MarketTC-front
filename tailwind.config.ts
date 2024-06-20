@@ -11,6 +11,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: { min: '481px', max: '768px' },
+        laptop: { min: '769px', max: '1439px' },
+        desktop: { min: '1440px' },
+      },
       colors: {
         primary: {
           100: '#BAE6EF',
@@ -44,6 +49,10 @@ const config: Config = {
       base: ['16px', '24px'],
       sm: ['14px', '24px'],
       p: ['16px', '32px'],
+    },
+    boxShadow: {
+      md: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+      hmd: '2px 6px 6px 0px rgba(0, 0, 0, 0.35)',
     },
   },
   plugins: [],
