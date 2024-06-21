@@ -1,25 +1,31 @@
-const getData = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  if (!response.ok) throw new Error("failed to fetch API data");
-  return response.json();
-};
+'use client';
+import React, { useState, useEffect } from 'react';
 
-type User = {
-  id: string;
-  name: string;
-};
+async function getData(): Promise<any> {
+  // const apiUrl = process.env.URL;
+  const data = await fetch(`http://localhost:5000/healthcheck`, {
+    cache: 'no-cache',
+  }).then((res) => res.json());
+  return data;
+}
 
-const HealthCheckPage = async () => {
-  const apiData = await getData();
+const HealthCheckPage: React.FC = () => {
+  const [apiData, setApiData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getData();
+      setApiData(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <h1>Health Check</h1>
-
-      <div>
-        {apiData.map((user: User) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </div>
+      <h2>Status Code: {apiData?.status_code}</h2>
+      <div>Server: {apiData?.result.server}</div>
     </div>
   );
 };
