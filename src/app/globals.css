@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0 solid transparent;
 }
 
 body {
@@ -48,6 +54,22 @@ body {
       linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 20px) calc(100% - 2px) no-repeat,
       linear-gradient(#248888 0%, #ff9506 100%) 0 100%/50% 100%;
   }
+
+  .carousel-content:first-child > :first-child {
+    margin-left: 4px;
+  }
+}
+
+.carousel-arrow > * {
+  height: 0;
+  border: none;
+}
+
+.carousel-arrow.carousel-arrow-prev {
+  background: url('../../public/icons/prev.svg') 0 / 100% no-repeat;
+}
+.carousel-arrow.carousel-arrow-next {
+  background: url('../../public/icons/next.svg') 0 / 100% no-repeat;
 }
 
 @media (min-width: 376px) {
