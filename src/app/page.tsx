@@ -1,10 +1,13 @@
-import CatalogAllProducts from "@/components/CatalogAllProducts";
-import Image from "next/image";
+import CatalogAllProducts from '@/components/CatalogAllProducts';
+import FavoriteProducts from '@/components/FavoriteProducts';
+import PromotionalProducts from '@/components/PromotionalProducts';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className=" desktop:max-w-[1440px] laptop:max-w-full h-full desktop:px-[120px]  laptop:px-[40px] tablet:px-[10px]  mx-auto  ">
+      <PromotionalProducts />
       <CatalogAllProducts />
+      <FavoriteProducts />
     </main>
   );
 }
