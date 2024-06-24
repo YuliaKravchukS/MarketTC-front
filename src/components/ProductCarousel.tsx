@@ -13,7 +13,7 @@ const ProductCarousel = () => {
     <Carousel
       opts={{
         align: 'center',
-        breakpoints: { '(min-width: 481px)': { align: 'start' } },
+        breakpoints: { '(min-width: 768px)': { align: 'start' } },
         loop: true,
       }}
       className="w-full max-w-[1188px] mx-auto ">
