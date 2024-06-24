@@ -1,31 +1,34 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-
-async function getData(): Promise<any> {
-  // const apiUrl = process.env.URL;
-  const data = await fetch(`http://localhost:5000/healthcheck`, {
-    cache: 'no-cache',
-  }).then((res) => res.json());
-  return data;
+interface HealthCheckPromise {
+  status_code: number;
+  detail: string;
+  result: Result;
 }
 
-const HealthCheckPage: React.FC = () => {
-  const [apiData, setApiData] = useState<any>(null);
+type Result = {
+  database: string;
+  server: string;
+};
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getData();
-      setApiData(data);
-    };
+async function getData(): Promise<HealthCheckPromise> {
+  try {
+    const data = await fetch(`https://api-028m.onrender.com/healthcheck`, {
+      cache: 'no-cache',
+    }).then((res) => res.json());
+    return data;
+  } catch (error) {
+    console.error('Failed to fetch data:', error);
+    throw error;
+  }
+}
 
-    fetchData();
-  }, []);
+const HealthCheckPage: React.FC = async () => {
+  const data = await getData();
 
   return (
     <div>
       <h1>Health Check</h1>
-      <h2>Status Code: {apiData?.status_code}</h2>
-      <div>Server: {apiData?.result.server}</div>
+      <h2>Status Code: {data?.status_code}</h2>
+      <div>Server: {data?.result.server}</div>
     </div>
   );
 };
