@@ -161,5 +161,28 @@ export const catalogProducts = {
         },
       ],
     },
+    {
+      id: 8,
+      name: "Music instrument",
+
+      products: [
+        {
+          id: 801,
+          name: "Piano",
+          description: "Comfortable cotton t-shirt in various sizes",
+          price: 15.99,
+          category: "Music instrument",
+          stock: 500,
+        },
+        {
+          id: 802,
+          name: "Guitar",
+          description: "Stylish denim jeans with a great fit",
+          price: 49.99,
+          category: "Music instrument",
+          stock: 300,
+        },
+      ],
+    },
   ],
 };
