@@ -1,25 +1,34 @@
-const getData = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  if (!response.ok) throw new Error("failed to fetch API data");
-  return response.json();
+interface HealthCheckPromise {
+  status_code: number;
+  detail: string;
+  result: Result;
+}
+
+type Result = {
+  database: string;
+  server: string;
 };
 
-type User = {
-  id: string;
-  name: string;
-};
+async function getData(): Promise<HealthCheckPromise> {
+  try {
+    const data = await fetch(`https://api-028m.onrender.com/healthcheck`, {
+      cache: 'no-cache',
+    }).then((res) => res.json());
+    return data;
+  } catch (error) {
+    console.error('Failed to fetch data:', error);
+    throw error;
+  }
+}
 
-const HealthCheckPage = async () => {
-  const apiData = await getData();
+const HealthCheckPage: React.FC = async () => {
+  const data = await getData();
+
   return (
     <div>
       <h1>Health Check</h1>
-
-      <div>
-        {apiData.map((user: User) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </div>
+      <h2>Status Code: {data?.status_code}</h2>
+      <div>Server: {data?.result.server}</div>
     </div>
   );
 };

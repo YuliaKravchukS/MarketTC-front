@@ -9,7 +9,7 @@ console.log('data: ', data);
 
 export default function CatalogAllProducts() {
   return (
-    <div className=" flex flex-col justify-center items-center gap-[26px] md: gap-[36px]">
+    <div className=" flex flex-col justify-center items-center gap-[26px] md:gap-[36px]">
       <h6>Catalog</h6>
       <ul className="w-full grid grid-cols-1 gap-6 md:grid-cols-4 gap-x-6 gap-y-6">
         {data.map((product: Category) => (
