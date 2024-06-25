@@ -34,7 +34,7 @@ const config: Config = {
       },
       gridTemplateAreas: {
         mobile: ["banner banner", "logo nav"],
-        desktop: ["logo banner nav"],
+        desktop: ["logo banner banner  banner banner nav nav"],
       },
     },
     fontSize: {
