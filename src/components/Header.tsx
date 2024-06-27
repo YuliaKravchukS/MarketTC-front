@@ -3,7 +3,7 @@ import HeaderNav from "./HeaderNav";
 
 const Header = () => {
   return (
-    <header className=" grid grid-areas-mobile md:grid-areas-desktop items-center gap-6 auto-cols-auto">
+    <header className=" grid grid-areas-mobile md:grid-areas-desktop items-center gap-6">
       <div className=" py-6  grid-in-banner bg-black-100 text-center md:rounded-xl">
         Banner
       </div>
