@@ -1,23 +1,34 @@
-import { catalogProducts } from '@/db/catalogProducts';
-import CategoryItem from './CategoryItem';
-import { Category, DataProducts } from './types';
+import { catalogProducts } from "@/db/catalogProducts";
+import CategoryItem from "./CategoryItem";
+import { Category, DataProducts } from "./types";
+// import fetchAllCategories from "../lib/fetchAllCategories";
+import Link from "next/link.js";
+import type React from "react";
 
 const dataProducts: DataProducts = JSON.parse(JSON.stringify(catalogProducts));
 
 const data: Category[] = dataProducts.categories;
-console.log('data: ', data);
+console.log("data: ", data);
 
-export default function CatalogAllProducts() {
+export default async function CatalogAllProducts() {
+  // const data = await fetchAllCategories();
   return (
-    <div className="m-auto flex flex-col justify-center items-center gap-[26px] md:gap-[32px] md:w-[576px] 2xl:gap-[36px] 2xl:w-[1192px]">
+    <section className='m-auto flex flex-col justify-center items-center pt-9 pb-7 px-0.5 gap-[26px] md:gap-8 md:w-[576px] xl:w-[935px] 2xl:gap-9 2xl:max-w-[1192px]'>
       <h2>Catalog</h2>
-      <ul className="w-full grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-[30px] md:gap-y-12 2xl:grid-cols-4 2xl:gap-y-10">
-        {data.map((product: Category) => (
-          <li className="flex gap-5 w-full h-[310px]" key={product.id}>
-            <CategoryItem product={product} />
-          </li>
-        ))}
+      <ul className='block w-full grid grid-cols-1 gap-6 h-[970px] overflow-hidden md:grid-cols-2 md:gap-x-[30px] md:gap-y-12 md:h-[668px] xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-y-10'>
+        {data &&
+          data.slice(0, 8).map((product: Category) => (
+            <li className='flex gap-5 w-full h-[310px]' key={product.id}>
+              <CategoryItem product={product} />
+            </li>
+          ))}
       </ul>
-    </div>
+      <Link
+        href=''
+        className='border border-primary-500 text-primary-500 rounded-[10px] px-8 py-3 flex justify-center text-lg w-[163px] h-[51px] tracking-normal hover:bg-primary-500 hover:text-background-100'
+      >
+        See more...
+      </Link>
+    </section>
   );
 }
