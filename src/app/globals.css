@@ -2,22 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0 solid transparent;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+  }
+  html {
+    color-scheme: light !important;
+  }
 
-body {
-  @apply bg-background-500 text-black-500;
+  body {
+    @apply bg-background-500 text-black-500;
+  }
 }
-
 @layer utilities {
   h1 {
     @apply text-h1;
@@ -58,20 +62,25 @@ body {
   .carousel-content:first-child > :first-child {
     margin-left: 4px;
   }
-}
 
-.carousel-arrow > * {
-  height: 0;
-  border: none;
-}
+  .carousel-arrow > * {
+    height: 0;
+    border: none;
+  }
 
-.carousel-arrow.carousel-arrow-prev {
-  background: url('../../public/icons/prev.svg') 0 / 100% no-repeat;
+  .carousel-arrow.carousel-arrow-prev {
+    background: url('../../public/icons/prev.svg') 0 / 100% no-repeat;
+  }
+  .carousel-arrow.carousel-arrow-next {
+    background: url('../../public/icons/next.svg') 0 / 100% no-repeat;
+  }
+  .search-input-hero::placeholder {
+    background: url('../../public/icons/search.svg') 10px / 16px no-repeat;
+  }
+  .search-input-hero:focus::placeholder {
+    background-image: none;
+  }
 }
-.carousel-arrow.carousel-arrow-next {
-  background: url('../../public/icons/next.svg') 0 / 100% no-repeat;
-}
-
 @media (min-width: 376px) {
   h6 {
     font-size: 32px;

@@ -3,10 +3,10 @@ import React from 'react';
 
 const ProductCard = () => {
   return (
-    <div className="  w-[188px]  h-[280px] bg-white shadow-md hover:shadow-hmd rounded-[10px] liner-gradient px-1 text-center pt-1 ">
-      <div className="relative">
+    <div className="  w-[191px]  h-[280px] bg-white shadow-md hover:shadow-hmd rounded-[10px] liner-gradient p-1 text-center  ">
+      <div className="relative px-[3.5px]">
         <Image
-          className=" px-0.5 block mx-auto"
+          className="  block "
           src="/images/rectangle.jpg"
           alt=""
           width={176}
