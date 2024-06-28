@@ -1,17 +1,30 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeaderNav = () => {
   return (
-    <nav className="grid-in-nav pr-5">
-      <ul className="flex justify-between">
+    <nav className="grid-in-nav pr-8 xl:pr-0">
+      <ul className="flex justify-between items-center">
         <li>
-          <button className="bg-black-100 p-2">1</button>
+          <Link href="/">
+            <Image
+              src="/icons/account.svg"
+              alt=""
+              width={20}
+              height={20}
+            ></Image>
+          </Link>
         </li>
         <li>
-          <button className="bg-black-100 p-2">2</button>
+          <Link href="/">
+            <Image src="/icons/heart.svg" alt="" width={20} height={20}></Image>
+          </Link>
         </li>
         <li>
-          <button className="bg-black-100 p-2">3</button>
+          <Link href="/">
+            <Image src="/icons/cart.svg" alt="" width={20} height={20}></Image>
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,7 +1,7 @@
-import CatalogAllProducts from '@/components/CatalogAllProducts';
-import FavoriteProducts from '@/components/FavoriteProducts';
-import HeroSection from '@/components/HeroSection';
-import PromotionalProducts from '@/components/PromotionalProducts';
+import CatalogAllProducts from "@/components/CatalogAllProducts";
+import FavoriteProducts from "@/components/FavoriteProducts";
+import HeroSection from "@/components/HeroSection";
+import PromotionalProducts from "@/components/PromotionalProducts";
 
 export default function Home() {
   return (

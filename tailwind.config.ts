@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,8 +13,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xl: '1200px',
-        '2xl': '1440px',
+        xl: "1200px",
+        "2xl": "1440px",
       },
       colors: {
         primary: {
@@ -37,11 +37,13 @@ const config: Config = {
           500: "#F10606",
         },
       },
+      gridTemplateColumns: {
+        tablet: "1fr 8fr 3fr",
+        desktop: "1fr 10fr 2fr",
+      },
       gridTemplateAreas: {
         mobile: ["banner banner", "logo nav"],
-        desktop: [
-          "logo banner banner banner banner banner banner banner banner banner banner banner banner banner banner banner nav nav nav nav nav nav",
-        ],
+        desktop: ["logo banner nav"],
       },
     },
     fontSize: {
@@ -57,8 +59,8 @@ const config: Config = {
       p: ["16px", "32px"],
     },
     boxShadow: {
-      md: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
-      hmd: '2px 6px 6px 0px rgba(0, 0, 0, 0.35)',
+      md: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+      hmd: "2px 6px 6px 0px rgba(0, 0, 0, 0.35)",
     },
   },
   plugins: [require("@savvywombat/tailwindcss-grid-areas")],
