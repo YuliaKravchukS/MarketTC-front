@@ -38,8 +38,9 @@ const config: Config = {
         },
       },
       gridTemplateColumns: {
-        tablet: "1fr 8fr 3fr",
-        desktop: "1fr 10fr 2fr",
+        md: "1fr 8fr 132px",
+        xl: "94px 732px 132px",
+        "2xl": "160px 718px 148px",
       },
       gridTemplateAreas: {
         mobile: ["banner banner", "logo nav"],
