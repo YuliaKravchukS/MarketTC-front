@@ -4,7 +4,7 @@ import React from "react";
 
 const HeaderNav = () => {
   return (
-    <nav className="grid-in-nav pr-8 xl:pr-0">
+    <nav className="grid-in-nav pr-8 md:pr-0">
       <ul className="flex justify-between items-center">
         <li>
           <Link href="/">
