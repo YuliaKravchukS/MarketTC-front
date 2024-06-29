@@ -12,13 +12,13 @@ console.log("data: ", data);
 
 export default async function CatalogAllProducts() {
   return (
-    <section className='m-auto flex flex-col justify-center items-center pt-9 pb-7 px-0.5 gap-[26px] md:gap-8 md:w-[576px] xl:w-[935px] 2xl:gap-9 2xl:max-w-[1192px]'>
-      <h2>Catalog</h2>
-      <ul className='block w-full grid grid-cols-1 gap-6 h-[970px] overflow-hidden md:grid-cols-2 md:gap-x-[30px] md:gap-y-12 md:h-[668px] xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-y-10'>
+    <section className='w-full flex flex-col justify-center items-center pt-9 pb-7 px-0.5 gap-[26px] md:gap-8  2xl:gap-9 '>
+      <h6>Catalog</h6>
+      <ul className='mx-auto grid grid-cols-1 gap-6 h-[970px] overflow-hidden md:grid-cols-2 md:gap-x-[30px] md:gap-y-12 md:h-[668px] md:max-w-[576px] xl:min-w-[1040px] xl:grid-cols-3 xl:gap-x-28 2xl:max-w-[1210px] 2xl:grid-cols-4 2xl:gap-y-10 2xl:gap-x-[30px]'>
         {data &&
           data
             .map((product: Category) => (
-              <li className='flex gap-5 w-full h-[310px]' key={product.id}>
+              <li className='flex gap-5 w-[278px] h-[310px]' key={product.id}>
                 <CategoryItem product={product} />
               </li>
             ))

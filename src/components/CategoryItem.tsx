@@ -16,9 +16,6 @@ const CategoryItem: React.FC<ProductItemProps> = ({ product }) => {
           width={278}
           height={260}
         />
-        <svg>
-          <use href=''></use>
-        </svg>
       </div>
       <p>{product.name}</p>
     </div>
