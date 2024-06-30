@@ -37,6 +37,15 @@ const config: Config = {
           500: '#F10606',
         },
       },
+      gridTemplateColumns: {
+        md: '1fr 8fr 132px',
+        xl: '94px 732px 132px',
+        '2xl': '160px 718px 148px',
+      },
+      gridTemplateAreas: {
+        mobile: ['banner banner', 'logo nav'],
+        desktop: ['logo banner nav'],
+      },
     },
     fontSize: {
       h1: ['64px', '72px'],
@@ -55,6 +64,6 @@ const config: Config = {
       hmd: '2px 6px 6px 0px rgba(0, 0, 0, 0.35)',
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
 export default config;
