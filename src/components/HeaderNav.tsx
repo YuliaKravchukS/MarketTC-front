@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 const HeaderNav = () => {
   return (
@@ -8,12 +8,7 @@ const HeaderNav = () => {
       <ul className="flex justify-between items-center">
         <li>
           <Link href="/">
-            <Image
-              src="/icons/account.svg"
-              alt=""
-              width={20}
-              height={20}
-            ></Image>
+            <Image src="/icons/account.svg" alt="" width={20} height={20}></Image>
           </Link>
         </li>
         <li>
