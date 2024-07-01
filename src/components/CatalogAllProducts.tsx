@@ -26,7 +26,7 @@ export default async function CatalogAllProducts() {
       </ul>
       <Link
         href=''
-        className='border border-primary-500 text-primary-500 rounded-[10px] px-8 py-3 flex justify-center text-lg w-[163px] h-[51px] tracking-normal hover:bg-primary-500 hover:text-background-100'
+        className='border border-primary-500 text-primary-500 rounded-[10px] px-7 py-3 flex justify-center text-lg w-[161px] h-[51px] hover:bg-primary-500 hover:text-background-100'
       >
         See more...
       </Link>
