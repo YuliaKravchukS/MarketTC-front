@@ -7,7 +7,7 @@ const ProductCard = ({ product }: { product: ProductResult }) => {
     <div className="  w-[191px]  h-[280px] bg-white shadow-md hover:shadow-hmd rounded-[10px] liner-gradient p-1 text-center  ">
       <div className="relative px-[3.5px]">
         <Image
-          className="  block "
+          className="block w-[176px] h-[192px]"
           src={`https://proactive-flexibility-production.up.railway.app/${product.mainImage}`}
           alt=""
           width={176}
