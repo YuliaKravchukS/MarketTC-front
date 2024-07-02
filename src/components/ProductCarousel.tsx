@@ -21,7 +21,9 @@ const ProductCarousel = ({ data }: { data: ProductStatus }) => {
       <CarouselContent className="-ml-1 xl:-ml-5  2xl:-ml-3 pb-2 ">
         {data &&
           data.result.map((product) => (
-            <CarouselItem className=" basis-auto pl-1 xl:pl-5 2xl:pl-3 shrink-0   ">
+            <CarouselItem
+              className=" basis-auto pl-1 xl:pl-5 2xl:pl-3 shrink-0   "
+              key={product.id}>
               <ProductCard product={product} />
             </CarouselItem>
           ))}
