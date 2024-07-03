@@ -8,7 +8,7 @@ const Footer = () => {
       <ul className="mb-4">
         <li className="footerList">
           <p>Для покупців</p>
-          <ul className="footerSubList">
+          <ul>
             <li>Як здійснити покупку</li>
             <li>Оплата та повернення товару</li>
             <li>Доставка</li>
@@ -17,7 +17,7 @@ const Footer = () => {
         </li>
         <li className="footerList">
           <p>Для продавців</p>
-          <ul className="footerSubList">
+          <ul>
             <li>Умови співпраці</li>
             <li>Тарифи</li>
             <li>Угода</li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </li>
         <li className="footerList">
           <p>Про нас</p>
-          <ul className="footerSubList">
+          <ul>
             <li>Корисна інформація</li>
             <li>Контакти</li>
           </ul>
