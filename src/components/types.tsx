@@ -18,3 +18,7 @@ export interface Category {
 export interface DataProducts {
   categories: Category[];
 }
+
+export interface LogoProps {
+  paddingX?: string;
+}
