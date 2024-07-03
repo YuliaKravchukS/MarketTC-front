@@ -22,3 +22,4 @@ export interface DataProducts {
 export interface LogoProps {
   paddingX?: string;
 }
+
