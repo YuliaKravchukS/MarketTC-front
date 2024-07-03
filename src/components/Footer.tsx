@@ -5,9 +5,9 @@ import Socials from "./ui/socials";
 
 const Footer = () => {
   return (
-    <footer className="flex gap-3 items-start h-full mx-auto pt-8 md:pt-10 pl-[26px] pb-24 md:pb-[109px] md:px-4 xl:px-20 2xl:px-[115px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-      <Logo marginB="mb-6" />
-      <ul className="mb-4 grid grid-areas-footerTablet gap-x-8">
+    <footer className="flex flex-col md:flex-row gap-6 xl:gap-[138px] items-start h-full mx-auto pt-8 md:pt-10 pl-[26px] pb-24 md:pb-[109px] md:px-4 xl:px-20 2xl:px-[115px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+      <Logo />
+      <ul className="mb-4 md:grid md:grid-areas-footerTablet gap-x-8 xl:gap-x-[100px]">
         <li className="grid-in-customer footerList">
           <p>Для покупців</p>
           <ul>
