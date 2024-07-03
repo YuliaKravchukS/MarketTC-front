@@ -5,10 +5,10 @@ import Socials from "./ui/socials";
 
 const Footer = () => {
   return (
-    <footer className="h-full mx-auto pt-8 pl-[26px] pb-24 md:py-4 2xl:py-5 xl:max-w-[1200px] 2xl:max-w-[1440px]">
+    <footer className="flex gap-3 items-start h-full mx-auto pt-8 md:pt-10 pl-[26px] pb-24 md:pb-[109px] md:px-4 xl:px-20 2xl:px-[115px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
       <Logo marginB="mb-6" />
-      <ul className="mb-4">
-        <li className="footerList">
+      <ul className="mb-4 grid grid-areas-footerTablet gap-x-8">
+        <li className="grid-in-customer footerList">
           <p>Для покупців</p>
           <ul>
             <li>
@@ -25,7 +25,7 @@ const Footer = () => {
             </li>
           </ul>
         </li>
-        <li className="footerList">
+        <li className="grid-in-seller footerList">
           <p>Для продавців</p>
           <ul>
             <li>
@@ -35,14 +35,14 @@ const Footer = () => {
               <Link href="/">Тарифи</Link>
             </li>
             <li>
-              <Link href="/">Угода</Link>
+              <Link href="/">Угода про співпрацю</Link>
             </li>
             <li>
               <Link href="/">Конфіденційність</Link>
             </li>
           </ul>
         </li>
-        <li className="footerList">
+        <li className="grid-in-about footerList">
           <p>Про нас</p>
           <ul>
             <li>
@@ -53,8 +53,10 @@ const Footer = () => {
             </li>
           </ul>
         </li>
+        <li>
+          <Socials />
+        </li>
       </ul>
-      <Socials />
     </footer>
   );
 };
