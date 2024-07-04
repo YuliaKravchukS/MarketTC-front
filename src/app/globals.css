@@ -46,16 +46,23 @@
   }
 
   .liner-gradient {
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 9px, transparent 9px) 0% 0%/10px
-        10px no-repeat,
-      radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 9px, transparent 9px) 100% 0%/10px 10px
-        no-repeat,
-      radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 9px, transparent 9px) 0% 100%/10px 10px
-        no-repeat,
-      radial-gradient(circle at 0 0, #ffffff 0, #ffffff 9px, transparent 9px) 100% 100%/10px 10px
-        no-repeat,
-      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px) calc(100% - 20px) no-repeat,
-      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 20px) calc(100% - 2px) no-repeat,
+    background: radial-gradient(
+          circle at 100% 100%,
+          #ffffff 0,
+          #ffffff 9px,
+          transparent 9px
+        )
+        0% 0%/10px 10px no-repeat,
+      radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 9px, transparent 9px)
+        100% 0%/10px 10px no-repeat,
+      radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 9px, transparent 9px)
+        0% 100%/10px 10px no-repeat,
+      radial-gradient(circle at 0 0, #ffffff 0, #ffffff 9px, transparent 9px)
+        100% 100%/10px 10px no-repeat,
+      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+        calc(100% - 20px) no-repeat,
+      linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 20px)
+        calc(100% - 2px) no-repeat,
       linear-gradient(#248888 0%, #ff9506 100%) 0 100%/50% 100%;
   }
 
@@ -69,13 +76,13 @@
   }
 
   .carousel-arrow.carousel-arrow-prev {
-    background: url('../../public/icons/prev.svg') 0 / 100% no-repeat;
+    background: url("../../public/icons/prev.svg") 0 / 100% no-repeat;
   }
   .carousel-arrow.carousel-arrow-next {
-    background: url('../../public/icons/next.svg') 0 / 100% no-repeat;
+    background: url("../../public/icons/next.svg") 0 / 100% no-repeat;
   }
   .search-input-hero::placeholder {
-    background: url('../../public/icons/search.svg') 10px / 16px no-repeat;
+    background: url("../../public/icons/search.svg") 10px / 16px no-repeat;
   }
   .search-input-hero:focus::placeholder {
     background-image: none;
@@ -86,4 +93,20 @@
     font-size: 32px;
     line-height: 48px;
   }
+}
+
+/* Footer */
+
+.footerList > p {
+  @apply mb-3 md:mb-5 font-bold;
+}
+
+.footerList > ul {
+  @apply flex flex-col gap-2 text-sm;
+}
+
+/* Socials */
+
+.socialsList > li {
+  @apply cursor-pointer;
 }

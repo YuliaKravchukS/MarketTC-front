@@ -1,11 +1,11 @@
 import React from "react";
 import HeaderNav from "./HeaderNav";
-import Logo from "./Logo";
+import Logo from "./ui/logo";
 
 const Header = () => {
   return (
     <header className="h-full mx-auto  md:py-4 2xl:py-5 md:px-5 xl:px-20 2xl:px-[115px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-      <div className=" grid  grid-areas-mobile md:grid-areas-desktop md:grid-cols-md xl:grid-cols-xl 2xl:grid-cols-2xl items-center gap-6 2xl:gap-[76px]">
+      <div className=" grid  grid-areas-headerMobile md:grid-areas-headerTablet md:grid-cols-md xl:grid-cols-xl 2xl:grid-cols-2xl items-center gap-6 2xl:gap-[76px]">
         <div className=" py-6  grid-in-banner bg-black-100 text-center md:rounded-xl">
           Banner
         </div>
