@@ -3,7 +3,7 @@ import React from "react";
 
 const Socials = () => {
   return (
-    <ul className="grid-in-socials flex gap-4 items-center">
+    <ul className="socialsList flex gap-4 items-center">
       <li>
         <Image
           src="/icons/twitter.svg"

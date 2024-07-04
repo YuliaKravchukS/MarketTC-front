@@ -97,14 +97,16 @@
 
 /* Footer */
 
-.footerList {
-  @apply mb-4;
-}
-
 .footerList > p {
   @apply mb-3 md:mb-5 font-bold;
 }
 
 .footerList > ul {
   @apply flex flex-col gap-2 text-sm;
+}
+
+/* Socials */
+
+.socialsList > li {
+  @apply cursor-pointer;
 }

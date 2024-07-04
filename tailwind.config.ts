@@ -45,7 +45,6 @@ const config: Config = {
       gridTemplateAreas: {
         headerMobile: ["banner banner", "logo nav"],
         headerTablet: ["logo banner nav"],
-        footerTablet: ["customer seller about", "customer seller socials"],
       },
     },
     fontSize: {
