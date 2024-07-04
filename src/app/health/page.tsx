@@ -1,31 +1,12 @@
-interface HealthCheckPromise {
-  statusCode: number;
-  message: string;
-  result: Result;
-}
-
-type Result = {
-  database: string;
-  server: string;
-};
-
-async function getData(): Promise<HealthCheckPromise> {
-  try {
-    const data = await fetch(
-      `https://proactive-flexibility-production.up.railway.app/healthcheck`,
-      {
-        cache: 'no-cache',
-      },
-    ).then((res) => res.json());
-    return data;
-  } catch (error) {
-    console.error('Failed to fetch data:', error);
-    throw error;
-  }
-}
+import { getData } from '@/lib/utils';
+import { HealthCheckStatus } from '@/types';
 
 const HealthCheckPage: React.FC = async () => {
-  const data = await getData();
+  const data = await getData<HealthCheckStatus>('healthcheck');
+
+  if (!data) {
+    return <div>error</div>;
+  }
 
   return (
     <div>
