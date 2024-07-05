@@ -35,5 +35,5 @@ export type ProductItemProps = {
 };
 
 export type CatalogAllProductsProps = {
-  showAll: boolean;
+  showAll?: boolean;
 };

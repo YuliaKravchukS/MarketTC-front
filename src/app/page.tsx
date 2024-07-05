@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <Suspense fallback={<Loading />}>
         <PromotionalProducts />
-        <CatalogAllProducts showAll />
+        <CatalogAllProducts />
         <FavoriteProducts />
       </Suspense>
     </main>

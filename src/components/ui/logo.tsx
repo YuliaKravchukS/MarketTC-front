@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import type { LogoProps } from "@/types/index";
+import type { LogoProps } from "@/types";
 
 const Logo: React.FC<LogoProps> = ({ paddingX }) => {
   return (
