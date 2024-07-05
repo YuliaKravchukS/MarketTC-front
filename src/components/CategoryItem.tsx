@@ -1,16 +1,6 @@
-import { Category } from "./types";
+import { API_URL } from "@/constants/index";
+import { ProductItemProps } from "@/types/index.js";
 import Image from "next/image";
-// import image from "../images/150.png";
-import { BACKEND_URL } from "@/lib/fetchAllCategories";
-
-export interface Result {
-  id: number;
-  title: string;
-  image: string;
-}
-type ProductItemProps = {
-  product: Result;
-};
 
 const CategoryItem: React.FC<ProductItemProps> = ({ product }) => {
   return (
@@ -18,7 +8,7 @@ const CategoryItem: React.FC<ProductItemProps> = ({ product }) => {
       <div className='w-[278px] h-[260px]'>
         <Image
           className='object-cover w-full h-full'
-          src={`${BACKEND_URL}/${product.image}`}
+          src={`${API_URL}${product.image}`}
           alt={product.title}
           width={278}
           height={260}

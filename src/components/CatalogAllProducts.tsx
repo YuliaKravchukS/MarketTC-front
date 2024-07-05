@@ -1,19 +1,14 @@
-import { catalogProducts } from "@/db/catalogProducts";
+import { getData } from "@/lib/utils";
 import CategoryItem from "./CategoryItem";
-import { Category, DataProducts } from "./types";
 
 import Link from "next/link";
 import type React from "react";
-import fetchAllCategories from "@/lib/fetchAllCategories";
-
-type CatalogAllProductsProps = {
-  showAll: boolean;
-};
+import { CatalogStatus, CatalogAllProductsProps } from "@/types/index";
 
 const CatalogAllProducts: React.FC<CatalogAllProductsProps> = async ({
   showAll = false,
 }) => {
-  const data = await fetchAllCategories();
+  const data = await getData<CatalogStatus>("categories");
 
   return (
     <section className='w-full flex flex-col justify-center items-center pt-9 pb-7 px-0.5 gap-[26px] md:gap-8  2xl:gap-9 '>
@@ -23,9 +18,11 @@ const CatalogAllProducts: React.FC<CatalogAllProductsProps> = async ({
           showAll ? "h-auto " : "overflow-hidden  md:h-[668px]"
         }`}
       >
-        {(showAll ? data : data.slice(0, 8)).map((product) => (
+        {(showAll ? data.result : data.result.slice(0, 8)).map((product) => (
           <li className='flex gap-5 w-[278px] h-[310px]' key={product.id}>
-            <CategoryItem product={product} />
+            <Link href='/products'>
+              <CategoryItem product={product} />
+            </Link>
           </li>
         ))}
       </ul>

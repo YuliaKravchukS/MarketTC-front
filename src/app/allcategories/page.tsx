@@ -1,8 +1,13 @@
 import CatalogAllProducts from "@/components/CatalogAllProducts";
-import React from "react";
+import React, { Suspense } from "react";
+import Loading from "./loading";
 
-const allCategories: React.FC = () => {
-  return <CatalogAllProducts showAll />;
+const AllCategories: React.FC = () => {
+  return (
+    <Suspense fallback={<Loading />}>
+      <CatalogAllProducts showAll />;
+    </Suspense>
+  );
 };
 
-export default allCategories;
+export default AllCategories;
