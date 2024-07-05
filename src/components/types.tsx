@@ -19,6 +19,6 @@ export interface DataProducts {
   categories: Category[];
 }
 
-// export interface DataProducts {
-//   result: Category[];
-// }
+export interface LogoProps {
+  paddingX?: string;
+}

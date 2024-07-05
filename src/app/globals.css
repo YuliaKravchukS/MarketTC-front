@@ -77,13 +77,49 @@
   .search-input-hero::placeholder {
     background: url('../../public/icons/search.svg') 10px / 16px no-repeat;
   }
+  .search-input-hero:focus {
+    border-color: #ffcb21;
+  }
   .search-input-hero:focus::placeholder {
     background-image: none;
   }
 }
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   h6 {
     font-size: 32px;
     line-height: 48px;
   }
+}
+
+/*Favorite*/
+.product-card .heart-img:hover {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(46%) saturate(690%) hue-rotate(131deg)
+    brightness(91%) contrast(82%);
+  cursor: pointer;
+}
+.product-card .heart-img:active {
+  background: url('/icons/heart-fill.svg');
+}
+
+.favorite-section .product-card .heart-img {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(46%) saturate(690%) hue-rotate(131deg)
+    brightness(91%) contrast(82%);
+  cursor: pointer;
+  background: url('/icons/heart-fill.svg');
+}
+
+/* Footer */
+
+.footerList > p {
+  @apply mb-3 md:mb-5 font-bold;
+}
+
+.footerList > ul {
+  @apply flex flex-col gap-2 text-sm;
+}
+
+/* Socials */
+
+.socialsList > li {
+  @apply cursor-pointer;
 }
