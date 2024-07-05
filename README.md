@@ -1,11 +1,8 @@
-Docker Desktop must be installed https://www.docker.com/products/docker-desktop/
+You need to install Docker Desktop https://www.docker.com/products/docker-desktop/
 and run it
 
-Enter the command 'npm install' in the terminal to download all the necessary packages.
+Enter the command "npm run docker" in the terminal and your project will be successfully started on "http://localhost:3000".
 
-After that, enter the command 'docker compose up --build --watch' and your project will be
-successfully launched at "http://localhost:3000".
+To stop the project, go to the terminal and press "Ctrl + C".
 
-To stop the project, go to the terminal and press 'Ctrl + C'.
-
-Later, to restart it, enter the command 'docker compose up --watch'
+Also, if you change something (edit, add, delete...) outside the src directory, in order for the changes to take place, you need to restart the project (go to the terminal and press "Ctrl + C", enter the command "npm run docker" in the terminal)
