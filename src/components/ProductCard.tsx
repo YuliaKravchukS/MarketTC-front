@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProductCard = ({ product }: { product: ProductResult }) => {
   return (
-    <div className="  w-[191px]  h-[280px] bg-white shadow-md hover:shadow-hmd rounded-[10px] liner-gradient p-1 text-center  ">
+    <div className=" product-card  w-[191px]  h-[280px] bg-white shadow-md hover:shadow-hmd rounded-[10px] liner-gradient p-1 text-center  ">
       <div className="relative px-[3.5px]">
         <Image
           className="block w-[176px] h-[192px]"
@@ -14,9 +14,9 @@ const ProductCard = ({ product }: { product: ProductResult }) => {
           height={192}
         />
         <Image
-          className="absolute top-[11px] right-[9px]"
+          className="absolute top-[11px] right-[9px] heart-img h-[20px]"
           src="/icons/heart.svg"
-          width={20}
+          width={22}
           height={20}
           alt=""
         />
