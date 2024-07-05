@@ -1,23 +1,20 @@
-import { Category } from "./types";
+import { API_URL } from "@/constants/index";
+import { ProductItemProps } from "@/types/index.js";
 import Image from "next/image";
-import image from "../images/150.png";
-type ProductItemProps = {
-  product: Category;
-};
 
 const CategoryItem: React.FC<ProductItemProps> = ({ product }) => {
   return (
-    <div className='w-full flex flex-col justify-between items-center'>
+    <div className='w-full flex flex-col justify-between items-center cursor-pointer'>
       <div className='w-[278px] h-[260px]'>
         <Image
           className='object-cover w-full h-full'
-          src={image}
-          alt={product.name}
+          src={`${API_URL}${product.image}`}
+          alt={product.title}
           width={278}
           height={260}
         />
       </div>
-      <p>{product.name}</p>
+      <p>{product.title}</p>
     </div>
   );
 };
