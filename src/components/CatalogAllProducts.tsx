@@ -18,10 +18,10 @@ const CatalogAllProducts: React.FC<CatalogAllProductsProps> = async ({
           showAll ? "h-auto " : "overflow-hidden  md:h-[668px]"
         }`}
       >
-        {(showAll ? data.result : data.result.slice(0, 8)).map((product) => (
-          <li className='flex gap-5 w-[278px] h-[310px]' key={product.id}>
-            <Link href='/products'>
-              <CategoryItem product={product} />
+        {(showAll ? data.result : data.result.slice(0, 8)).map((category) => (
+          <li className='flex gap-5 w-[278px] h-[310px]' key={category.id}>
+            <Link href={`/products/${category.id}`}>
+              <CategoryItem category={category} />
             </Link>
           </li>
         ))}
