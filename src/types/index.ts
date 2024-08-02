@@ -31,9 +31,15 @@ export interface CategoriesResult {
   image: string;
 }
 export type ProductItemProps = {
-  product: CategoriesResult;
+  category: CategoriesResult;
 };
 
 export type CatalogAllProductsProps = {
+  query?: string;
   showAll?: boolean;
+};
+
+export type ProductsAllProps = {
+  params: { id: number };
+  // query?: string;
 };
