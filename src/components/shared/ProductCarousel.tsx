@@ -6,10 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import ProductCard from './ProductCard';
 import { ProductStatus } from '@/types';
+import { ProductCard } from './ProductCard';
 
-const ProductCarousel = ({ data }: { data: ProductStatus }) => {
+export const ProductCarousel = ({ data }: { data: ProductStatus }) => {
   return (
     <Carousel
       opts={{
@@ -33,5 +33,3 @@ const ProductCarousel = ({ data }: { data: ProductStatus }) => {
     </Carousel>
   );
 };
-
-export default ProductCarousel;

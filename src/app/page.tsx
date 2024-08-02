@@ -1,16 +1,18 @@
-import CatalogAllProducts from '@/components/CatalogAllProducts';
-import FavoriteProducts from '@/components/FavoriteProducts';
-import HeroSection from '@/components/HeroSection';
-import PromotionalProducts from '@/components/PromotionalProducts';
 import { Suspense } from 'react';
 import Loading from './loading';
+import {
+  CatalogAllProducts,
+  FavoriteProducts,
+  HeroSection,
+  PromotionalProducts,
+} from '@/components/shared';
 
 export default function Home() {
-//   {
-//   searchParams,
-// }: {
-//   searchParams?: { query: string };
-// }
+  //   {
+  //   searchParams,
+  // }: {
+  //   searchParams?: { query: string };
+  // }
   // const query = searchParams?.query || "";
 
   return (

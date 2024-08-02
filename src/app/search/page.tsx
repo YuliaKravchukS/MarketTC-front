@@ -1,4 +1,4 @@
-import ProductCard from '@/components/ProductCard';
+import { ProductCard } from '@/components/shared';
 import { getData } from '@/lib/utils';
 import { ProductsAllProps, ProductStatus } from '@/types/index';
 import Link from 'next/link';

@@ -1,0 +1,10 @@
+export { CatalogAllProducts } from './CatalogAllProducts';
+export { CategoryItem } from './CategoryItem';
+export { FavoriteProducts } from './FavoriteProducts';
+export { Footer } from './Footer';
+export { Header } from './Header';
+export { HeroSection } from './HeroSection';
+export { ProductCard } from './ProductCard';
+export { ProductCarousel } from './ProductCarousel';
+export { PromotionalProducts } from './PromotionalProducts';
+export { Search } from 'lucide-react';

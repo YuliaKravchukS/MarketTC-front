@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
-import Search from './Search';
+import { Button } from '../ui/button';
+import { Search } from './Search';
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <section className=" pt-8 xl:max-w-[1037px] mx-auto 2xl:max-w-[1198px] mb-[37px] md:mb-9 xl:mb-3 2xl:mb-[42px]">
       <div className="flex flex-wrap mb-2 md:flex-nowrap mx-[23px]  xl:mx-0 justify-center pb-8 md:gap-5 xl:gap-[60px] 2xl:gap-[100px] ">
@@ -22,5 +21,3 @@ const HeroSection = () => {
     </section>
   );
 };
-
-export default HeroSection;
