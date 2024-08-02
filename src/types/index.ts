@@ -41,5 +41,5 @@ export type CatalogAllProductsProps = {
 
 export type ProductsAllProps = {
   params: { id: number };
-  query?: string;
+  // query?: string;
 };
