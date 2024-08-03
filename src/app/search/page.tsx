@@ -1,5 +1,4 @@
-import { ProductCard } from '@/components/shared';
-import { getData } from '@/lib/utils';
+import { Api } from '@/services/api-client';
 import { ProductsAllProps, ProductStatus } from '@/types/index';
 import Link from 'next/link';
 // import { useSearchParams } from 'next/navigation';
@@ -10,7 +9,7 @@ const SearchResult: React.FC<ProductsAllProps> = async () => {
   //   const searchParams = useSearchParams();
   //   const query = searchParams.get('query')?.toLowerCase() || '';
 
-  const data = await getData<ProductStatus>(`products`);
+  const data = await Api.products.getAll();
   console.log('data.result: ', data.result);
 
   return (

@@ -2,13 +2,14 @@ import type React from 'react';
 import Link from 'next/link';
 
 import { getData } from '@/lib/utils';
-import { CatalogStatus, CatalogAllProductsProps } from '@/types/index';
+import { CatalogStatus, CatalogAllProductsProps, CategoriesResult } from '@/types/index';
 import { CategoryItem } from './CategoryItem';
+import { Api } from '@/services/api-client';
 
 export const CatalogAllProducts: React.FC<CatalogAllProductsProps> = async ({
   showAll = false,
 }) => {
-  const data = await getData<CatalogStatus>('categories');
+  const data = await Api.categories.getAll();
 
   return (
     <section className="w-full flex flex-col justify-center items-center pt-9 pb-7 px-0.5 gap-[26px] md:gap-8  2xl:gap-9 ">
@@ -17,7 +18,7 @@ export const CatalogAllProducts: React.FC<CatalogAllProductsProps> = async ({
         className={`mx-auto grid grid-cols-1 gap-6 h-[970px] md:grid-cols-2 md:gap-x-[30px] md:gap-y-12 md:max-w-[576px] xl:min-w-[1040px] xl:grid-cols-3 xl:gap-x-28 2xl:max-w-[1210px] 2xl:grid-cols-4 2xl:gap-y-10 2xl:gap-x-[30px] ${
           showAll ? 'h-auto ' : 'overflow-hidden  md:h-[668px]'
         }`}>
-        {(showAll ? data.result : data.result.slice(0, 8)).map((category) => (
+        {(showAll ? data.result : data.result.slice(0, 8)).map((category: CategoriesResult) => (
           <li className="flex gap-5 w-[278px] h-[310px]" key={category.id}>
             <Link href={`/products/${category.id}`}>
               <CategoryItem category={category} />

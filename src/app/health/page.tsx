@@ -1,8 +1,7 @@
-import { getData } from '@/lib/utils';
-import { HealthCheckStatus } from '@/types';
+import { Api } from '@/services/api-client';
 
 const HealthCheckPage: React.FC = async () => {
-  const data = await getData<HealthCheckStatus>('healthcheck');
+  const data = await Api.healthcheck.getAll();
 
   if (!data) {
     return <div>error</div>;
