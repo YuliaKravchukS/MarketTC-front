@@ -1,8 +1,6 @@
 import type React from 'react';
 import Link from 'next/link';
-
-import { getData } from '@/lib/utils';
-import { CatalogStatus, CatalogAllProductsProps, CategoriesResult } from '@/types/index';
+import { CatalogAllProductsProps, CategoriesResult } from '@/types/index';
 import { CategoryItem } from './CategoryItem';
 import { Api } from '@/services/api-client';
 
