@@ -10,7 +10,7 @@ const HealthCheckPage: React.FC = async () => {
   return (
     <div>
       <h1>Health Check</h1>
-      <h2>Status Code: {data?.statusCode}</h2>
+      <h2>Status Code: + {data?.statusCode}</h2>
       <div>Server: {data?.result.server}</div>
     </div>
   );
