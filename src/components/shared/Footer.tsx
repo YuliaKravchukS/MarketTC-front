@@ -1,9 +1,9 @@
-import React from "react";
-import Logo from "./ui/logo";
-import Link from "next/link";
-import Socials from "./ui/socials";
+import React from 'react';
+import Logo from '../ui/logo';
+import Link from 'next/link';
+import Socials from '../ui/socials';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="flex flex-col md:flex-row gap-6 md:gap-9 xl:gap-[138px] 2xl:gap-28 items-start h-full mx-auto pt-8 2xl:pt-[42px] pl-[26px] pb-[194px] md:pb-[65px] xl:pb-[94px] md:px-4  xl:px-20 2xl:px-[115px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
       <div className="md:pt-5 xl:pt-[10px] 2xl-pt-1">
@@ -64,5 +64,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

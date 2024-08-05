@@ -1,11 +1,11 @@
 'use client';
 
-import { Input } from './ui/input';
-import { Button } from './ui/button';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
-const Search = () => {
+export const Search = () => {
   const searchParams = useSearchParams();
   console.log('searchParams: ', searchParams);
   const { replace } = useRouter();
@@ -41,5 +41,3 @@ const Search = () => {
     </div>
   );
 };
-
-export default Search;

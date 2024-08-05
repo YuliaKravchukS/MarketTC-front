@@ -1,6 +1,6 @@
-import CatalogAllProducts from "@/components/CatalogAllProducts";
-import React, { Suspense } from "react";
-import Loading from "./loading";
+import React, { Suspense } from 'react';
+import Loading from './loading';
+import { CatalogAllProducts } from '@/components/shared';
 
 const AllCategories: React.FC = () => {
   return (

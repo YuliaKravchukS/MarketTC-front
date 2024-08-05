@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const HeaderNav = () => {
+export const HeaderNav = () => {
   return (
     <nav className="grid-in-nav pr-8 md:pr-0">
       <ul className="flex justify-between items-center">
@@ -25,5 +25,3 @@ const HeaderNav = () => {
     </nav>
   );
 };
-
-export default HeaderNav;

@@ -1,10 +1,9 @@
 import React from 'react';
-import ProductCarousel from './ProductCarousel';
-import { getData } from '@/lib/utils';
-import { ProductStatus } from '@/types';
+import { ProductCarousel } from './ProductCarousel';
+import { Api } from '@/services/api-client';
 
-const FavoriteProducts: React.FC = async () => {
-  const data = await getData<ProductStatus>('products');
+export const FavoriteProducts: React.FC = async () => {
+  const data = await Api.products.getAll();
   return (
     <section className=" favorite-section pt-9 pb-7 px-0.5">
       <h6 className="text-center">Favorite</h6>
@@ -14,5 +13,3 @@ const FavoriteProducts: React.FC = async () => {
     </section>
   );
 };
-
-export default FavoriteProducts;

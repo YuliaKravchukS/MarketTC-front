@@ -1,5 +1,4 @@
-import HeroSection from "@/components/HeroSection";
-import PromotionalProducts from "@/components/PromotionalProducts";
+import { HeroSection, PromotionalProducts } from '@/components/shared';
 
 export default function ProductsLayout({
   children,
